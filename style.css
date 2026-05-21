@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+/* デフォルトリセット */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Zen Maru Gothic", sans-serif;
+    background-color: #fafafa;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+/* コンテンツの幅 */
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    text-align: center;
+}
+
+/* --------------------
+ヘッダー *
+---------------------/
+
+/* メニュー */
+.site-nav {
+    display: flex;
+    margin: 30px auto 30px;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1rem;
+    list-style: none;
+}
+
+.site-nav li {
+    border-bottom: solid 2px goldenrod;
+}
+
+.site-nav a {
+    display: block
+}
+
+.site-nav a:hover {
+    rotate: -5deg;
+    color: #666;
+}
+
+/* メイン＋サイトタイトル */
+.site-title {
+    position: relative;
+    margin-bottom: 50px;
+    background-image: url(img/bagle.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.site-title h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    padding: 20px 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 5vw;
+    border: #fff 0.5vw solid;
+    border-radius: 10vw;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* --------------------
+見出し *
+---------------------/
+
+/* h2 */
+.section-title {
+    margin: 30px 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+
+    position: relative;
+    width: 50%;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    margin: 0px auto 40px;
+}
+
+.section-title::before {
+    position: absolute;
+    content: '';
+    border-top: 20px solid #f0f0f0;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* h3 */
+.content-title {
+    margin: 30px auto 20px;
+    border-bottom: solid 3px goldenrod;
+}
+
+
+/* --------------------
+パン紹介 
+---------------------*/
+
+.bread-box {
+    margin-bottom: 100px;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+
+}
+
+.bread-item {
+    margin-bottom: 100px;
+}
+
+.bread-item img {
+    width: 100%;
+    margin-bottom: 20PX;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.bread-name {
+    margin: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.bread-text {
+    margin: 0rem 1.5rem;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+/* --------------------
+プロフィール
+---------------------*/
+
+#profile .prof-box {
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.prof-box img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.prof-text {
+    text-align: justify;
+}
+
+
+.footer {
+    background-color: goldenrod;
+    line-height: 3rem;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+/* --------------------
+レスポンシブ
+---------------------*/
+
+@media (min-width:600px) {
+    .bread-box {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .bread-item {
+        width: 400px;
+    }
+
+    .bread-item img {
+        width: 400px;
+    }
+
+    .bread-name {
+        font-size: 1.5rem;
+    }
+
+    .bread-text {
+        font-size: 1rem;
+    }
+
+    .prof-box {
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: space-between;
+    }
+
+    .prof-box img {
+        width: 20%;
+        margin-right: 2rem;
+    }
+
+    /* #profile {
+        width: 600px;
+        margin-bottom: 30px;
+        text-align: center;
+    } */
+
+
+}
